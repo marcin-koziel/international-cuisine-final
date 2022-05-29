@@ -1,0 +1,80 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-transaction-heading"
+        data-cy="TransactionCreateUpdateHeading"
+        jhiTranslate="internationalCuisineFinalApp.transaction.home.createOrEditLabel"
+      >
+        Create or edit a Transaction
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="internationalCuisineFinalApp.transaction.subTotal" for="field_subTotal">Sub Total</label>
+          <input type="number" class="form-control" name="subTotal" id="field_subTotal" data-cy="subTotal" formControlName="subTotal" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="internationalCuisineFinalApp.transaction.tax" for="field_tax">Tax</label>
+          <input type="number" class="form-control" name="tax" id="field_tax" data-cy="tax" formControlName="tax" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="internationalCuisineFinalApp.transaction.total" for="field_total">Total</label>
+          <input type="number" class="form-control" name="total" id="field_total" data-cy="total" formControlName="total" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="internationalCuisineFinalApp.transaction.lastFourDigits" for="field_lastFourDigits"
+            >Last Four Digits</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="lastFourDigits"
+            id="field_lastFourDigits"
+            data-cy="lastFourDigits"
+            formControlName="lastFourDigits"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="internationalCuisineFinalApp.transaction.user" for="field_user">User</label>
+          <select class="form-control" id="field_user" data-cy="user" name="user" formControlName="user">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="userOption.id === editForm.get('user')!.value?.id ? editForm.get('user')!.value : userOption"
+              *ngFor="let userOption of usersSharedCollection; trackBy: trackUserById"
+            >
+              {{ userOption.login }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

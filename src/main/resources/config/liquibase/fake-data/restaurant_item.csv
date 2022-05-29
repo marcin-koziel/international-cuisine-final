@@ -1,0 +1,83 @@
+id;title;summary;price;item_discount;restaurant_menu_id
+1;Cold Borscht;With diced cucumber, dill and hardboiled egg, served with hot boiled potato (vegetarian option available).;8.95;0.00;1
+2;Beet Root Soup with Dumplings;Borscht consommé with choice of mushroom or meat dumplings.;7.95;0.00;1
+3;French Onion Soup;Homemade and served in oven baked bowl.;7.95;0.00;1
+4;Beef Tripe Soup;Tripe soup, tripe stew or tripe chorba Macedonian;7.95;0.00;1
+5;Beef Goulash Soup;Hearty beef stew.;8.95;0.00;1
+6;White Borscht;Traditional Easter borscht served with sausage and hardboiled egg.;7.95;0.00;1
+
+7;Herring;Topped with sour cream garnish and a bouquet of salads.;12.95;0.00;2
+8;Smoked Salmon;Served with a side of garden salad and toasted rye bread.;15.95;0.00;2
+9;Pierogi;open-source program RSS;7.95;0.00;2
+
+10;Salad Combo;A combination of fresh beets, coleslaw, carrots, and fried cabbage(contains pork).;9.95;0.00;3
+11;Fried Cabbage;Slow baked and lightly fried cabbage.;5.25;0.00;3
+12;Cucumber Salad;In sour cream and dill garnish.;6.25;0.00;3
+13;Beetroot Salad;Shredded beet salad.;5.25;0.00;3
+14;Coleslaw;Coleslaw, also known as cole slaw, or simply as slaw.;4.50c;0.00;3
+15;Garden Salad;Lettuce, cucumber, onion and tomato.;8.95;0.00;3
+16;Greek Salad;Lettuce, cucumber, onions, tomato, olives and feta cheese.;11.95;0.00;3
+17;Caesar Salad;A classic Caesar salad has just a few main ingredients: greens, a creamy dressing, croutons and cheese.;10.95;0.00;3
+
+18;Chicken Schnitzel;Served on fresh bun with garnishes.;13.95;0.00;4
+19;Pork Schnitzel;Served on fresh bun with garnishes.;13.95;0.00;4
+20;Roast Beef;Served on rye with side of horseradish and pickle.;14.95;0.00;4
+21;Polish Hamburger;Polish style ground-pork patty with cheddar and garnishes.;9.95;0.00;4
+
+22;Herring;Topped with a sourcream garnish and served with potatoes and a bouquet of salads.;17.95;0.00;5
+23;Panfried Fish Fillet;Lightly breaded fillet, served with potatoes and a bouquet of salads.;18.95;0.00;5
+24;Ground Meat Cutlets;Two ground pork patties served with potatoes and a bouquet of salads.;18.95;0.00;5
+25;Cabbage Rolls;Stuffed with rice and mushroom, topped with mushroom sauce and served with potatoes and a bouquet of salads.;18.95;0.00;5
+26;Hunter’s Stew;Slow cooked sauerkraut with slices of sausage and pork, served with rye bread.;13.95;0.00;5
+27;Polish Sausage;Topped with fried onions and served with fries, mustard and garnishes.;16.95;0.00;5
+28;Liver;Dusted in flour then panfried, topped with fried onions and served with potatoes and a bouquet of salads. Choice of Beef or Chicken.;18.50;0.00;5
+29;Potatoe Pancakes;Four pancakes served with a side of sourcream.;12.95;0.00;5
+30;Crepes;Choice of sweet cheese or strawberry jam filling, served with sourcream and a fruit garnish.;12.95;0.00;5
+31;Potato Dumplings;Topped with a goulash sauce and served with a bouquet of salads.;16.95;0.00;5
+
+32;Back Ribs;Slow cooked pork ribs with onions and spices, served with potatoes and a bouquet of salads.;21.95;0.00;6
+33;Roast Duck;Half a duck stuffed with fruit and slow roasted, served with dumplings and bouquet of salads.;29.95;0.00;6
+34;Roast Beef;Topped with goulash gravy and served with potatoes and a bouquet of salads.;24.95;0.00;6
+35;Roast Chicken;Half a chicken oven roasted served with potatoes and a bouquet of salads.;21.95;0.00;6
+
+36;Platter for 1;4 pierogi, bigos (Hunter’s Stew), Polonez Schnitzel and salad combo.;23.95;0.00;7
+37;Platter for 2 (3 person maximum);2 cabbage rolls, 6 pierogi, 2 Polonez Schnitzel and salad combo.;55.95;0.00;7
+38;Platter for 4 (6 person maximum);2 cabbage rolls, 6 pierogi, kopytka, 4 Polonez Schnitzel, Hunter’s Stew, sausage and salad combo.;119.00;0.00;7
+
+39;Goulash;Classic pork stew served with potatoes and a bouquet of salads.;19.50;0.00;8
+40;Paprikash;Hearty paprika infused beef stew with peppers, mushroom and onions, served with potatoes and a bouquet of salads.;20.95;0.00;8
+41;Pulpety;Minced chicken balls topped with a creamy dill sauce, served with potatoes and a bouquet of salads.;20.95;0.00;8
+42;Vegan Leczo;hearty paprika infused bean and vegetable stew (vegan).;18.50;0.00;8
+
+43;Restaurant Schnitzel;Topped with a fried egg and served with potatoes and a bouquet of salads. Pork or Chicken options.;21.95;0.00;9
+44;Schnitzel Melt;Topped with fried mushrooms and cheese, served with potatoes and a bouquet of salads. Pork or Chicken option.;22.95;0.00;9
+45;Pork Schnitzel;Plain cutlet served with potatoes and a bouquet of salads.;20.95;0.00;9
+46;Chicken Schnitzel;Plain chicken cutlet served with potatoes and a bouquet of salads.;20.95;0.00;9
+
+47;4 Pierogi;;4.75;0.00;10
+48;Sausage;;6.5;0.00;10
+49;Bigos (Hunter’s Stew);;6.50;0.00;10
+50;Goulash;;7.95;0.00;10
+51;Cabbage Roll;;4.50;0.00;10
+52;Fries;;5.00;0.00;10
+53;Potato;;2.75;0.00;10
+54;Gravy;;3.50;0.00;10
+55;Sourcream;;1.00;0.00;10
+56;Dill Pickles;;2.50;0.00;10
+
+57;Imported;Heineken, Stella, Becks, Carlsberg, Corona;5.75;0.00;11
+58;Local Beer & More…;Side Launch- Wheat, Side Launch- Lager, Hendersons- Best ale, Brickworks cider-Batch 1904, Whiteclaw-Hard seltzer;7.25;0.00;11
+59;Polish Beers;Zywiec, Okocim, Lezajsk, Tyskie, Lech, Warka, Tatra;6.95;0.00;11
+
+60;Polish Vodka;Wyborowa, Luksusowa, Zubrowka, Wodka Zoladkowa Gorzka, Extra Zynia;5.00;0.00;12
+61;Premium Polish Vodka;1oz Chopin, Belvedere;6.50;0.00;12
+62;Rye Whisky;1oz;5.00;0.00;12
+63;Scotch Whisky;1oz;6.50;0.00;12
+64;Brandy Cognacs;1oz;7.00;0.00;12
+65;Rum/Liquers;1oz;5.00;0.00;12
+66;Basic Mixed Drinks;1oz;8.50;0.00;12
+
+67;Fountain Pop (refills);;2.00;0.00;13
+68;Cans: Ice Tea, Coke, Diet Coke;;2.75;0.00;13
+69;Sparkling Water;;6.50;0.00;13
+70;Juices;;2.95;0.00;13

@@ -1,0 +1,92 @@
+<div>
+  <h2 id="page-heading" data-cy="RestaurantItemHeading">
+    <span jhiTranslate="internationalCuisineFinalApp.restaurantItem.home.title">Restaurant Items</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="internationalCuisineFinalApp.restaurantItem.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-restaurant-item"
+        [routerLink]="['/restaurant-item/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="internationalCuisineFinalApp.restaurantItem.home.createLabel"> Create a new Restaurant Item </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="restaurantItems?.length === 0">
+    <span jhiTranslate="internationalCuisineFinalApp.restaurantItem.home.notFound">No restaurantItems found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="restaurantItems && restaurantItems.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="global.field.id">ID</span></th>
+          <th scope="col"><span jhiTranslate="internationalCuisineFinalApp.restaurantItem.title">Title</span></th>
+          <th scope="col"><span jhiTranslate="internationalCuisineFinalApp.restaurantItem.summary">Summary</span></th>
+          <th scope="col"><span jhiTranslate="internationalCuisineFinalApp.restaurantItem.price">Price</span></th>
+          <th scope="col"><span jhiTranslate="internationalCuisineFinalApp.restaurantItem.itemDiscount">Item Discount</span></th>
+          <th scope="col"><span jhiTranslate="internationalCuisineFinalApp.restaurantItem.restaurantMenu">Restaurant Menu</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let restaurantItem of restaurantItems; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/restaurant-item', restaurantItem.id, 'view']">{{ restaurantItem.id }}</a>
+          </td>
+          <td>{{ restaurantItem.title }}</td>
+          <td>{{ restaurantItem.summary }}</td>
+          <td>{{ restaurantItem.price }}</td>
+          <td>{{ restaurantItem.itemDiscount }}</td>
+          <td>
+            <div *ngIf="restaurantItem.restaurantMenu">
+              <a [routerLink]="['/restaurant-menu', restaurantItem.restaurantMenu?.id, 'view']">{{
+                restaurantItem.restaurantMenu?.title
+              }}</a>
+            </div>
+          </td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/restaurant-item', restaurantItem.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/restaurant-item', restaurantItem.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(restaurantItem)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

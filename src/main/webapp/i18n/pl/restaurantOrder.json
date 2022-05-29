@@ -1,0 +1,27 @@
+{
+  "internationalCuisineFinalApp": {
+    "restaurantOrder": {
+      "home": {
+        "title": "Restaurant Order",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Restaurant Order",
+        "createOrEditLabel": "Dodaj lub edytuj: Restaurant Order",
+        "notFound": "No Restaurant Orders found"
+      },
+      "created": "Utworzono nowy obiekt typu Restaurant Order z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Restaurant Order z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Restaurant Order z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Restaurant Order {{ id }}?"
+      },
+      "detail": {
+        "title": "Restaurant Order"
+      },
+      "id": "ID",
+      "quantity": "Quantity",
+      "total": "Total",
+      "item": "Item",
+      "transaction": "Transaction"
+    }
+  }
+}

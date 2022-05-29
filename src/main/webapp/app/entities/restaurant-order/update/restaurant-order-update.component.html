@@ -1,0 +1,80 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-restaurant-order-heading"
+        data-cy="RestaurantOrderCreateUpdateHeading"
+        jhiTranslate="internationalCuisineFinalApp.restaurantOrder.home.createOrEditLabel"
+      >
+        Create or edit a Restaurant Order
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="internationalCuisineFinalApp.restaurantOrder.quantity" for="field_quantity"
+            >Quantity</label
+          >
+          <input type="number" class="form-control" name="quantity" id="field_quantity" data-cy="quantity" formControlName="quantity" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="internationalCuisineFinalApp.restaurantOrder.total" for="field_total">Total</label>
+          <input type="number" class="form-control" name="total" id="field_total" data-cy="total" formControlName="total" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="internationalCuisineFinalApp.restaurantOrder.item" for="field_item">Item</label>
+          <select class="form-control" id="field_item" data-cy="item" name="item" formControlName="item">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="restaurantItemOption.id === editForm.get('item')!.value?.id ? editForm.get('item')!.value : restaurantItemOption"
+              *ngFor="let restaurantItemOption of itemsCollection; trackBy: trackRestaurantItemById"
+            >
+              {{ restaurantItemOption.title }}
+            </option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="internationalCuisineFinalApp.restaurantOrder.transaction" for="field_transaction"
+            >Transaction</label
+          >
+          <select class="form-control" id="field_transaction" data-cy="transaction" name="transaction" formControlName="transaction">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="
+                transactionOption.id === editForm.get('transaction')!.value?.id ? editForm.get('transaction')!.value : transactionOption
+              "
+              *ngFor="let transactionOption of transactionsSharedCollection; trackBy: trackTransactionById"
+            >
+              {{ transactionOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

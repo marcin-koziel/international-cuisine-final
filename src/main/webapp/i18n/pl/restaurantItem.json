@@ -1,0 +1,29 @@
+{
+  "internationalCuisineFinalApp": {
+    "restaurantItem": {
+      "home": {
+        "title": "Restaurant Item",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Restaurant Item",
+        "createOrEditLabel": "Dodaj lub edytuj: Restaurant Item",
+        "notFound": "No Restaurant Items found"
+      },
+      "created": "Utworzono nowy obiekt typu Restaurant Item z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Restaurant Item z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Restaurant Item z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Restaurant Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Restaurant Item"
+      },
+      "id": "ID",
+      "title": "Title",
+      "summary": "Summary",
+      "price": "Price",
+      "itemDiscount": "Item Discount",
+      "restaurantOrder": "Restaurant Order",
+      "restaurantMenu": "Restaurant Menu"
+    }
+  }
+}

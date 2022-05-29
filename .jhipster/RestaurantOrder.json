@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20220423052721",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "restaurant_order",
+  "fields": [
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "total",
+      "fieldType": "Float"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RestaurantOrder",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "restaurantItem",
+      "otherEntityRelationshipName": "restaurantOrder",
+      "ownerSide": true,
+      "relationshipName": "item",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "transaction",
+      "otherEntityRelationshipName": "restaurantOrder",
+      "relationshipName": "transaction",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

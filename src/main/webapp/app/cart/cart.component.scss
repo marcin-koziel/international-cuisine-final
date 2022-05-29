@@ -1,0 +1,18 @@
+.cart-container {
+  font-family: 'Arvo', Georgia,Times,serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+
+  .table, .payment-container {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    min-width: 600px;
+
+  }
+
+}

@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220423052720",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "restaurant_item",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "summary",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "itemDiscount",
+      "fieldType": "Float"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RestaurantItem",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "restaurantOrder",
+      "otherEntityRelationshipName": "item",
+      "ownerSide": false,
+      "relationshipName": "restaurantOrder",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "restaurantMenu",
+      "otherEntityRelationshipName": "item",
+      "relationshipName": "restaurantMenu",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

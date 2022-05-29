@@ -1,0 +1,59 @@
+/* ==========================================================================
+Main page styles
+========================================================================== */
+
+//.hipster {
+//  display: inline-block;
+//  width: 347px;
+//  height: 497px;
+//  background: url('../../content/images/jhipster_family_member_0.svg') no-repeat center top;
+//  background-size: contain;
+//}
+
+///* wait autoprefixer update to allow simple generation of high pixel density media query */
+//@media only screen and (-webkit-min-device-pixel-ratio: 2),
+//  only screen and (-moz-min-device-pixel-ratio: 2),
+//  only screen and (-o-min-device-pixel-ratio: 2/1),
+//  only screen and (min-resolution: 192dpi),
+//  only screen and (min-resolution: 2dppx) {
+//  .hipster {
+//    background: url('../../content/images/jhipster_family_member_0.svg') no-repeat center top;
+//    background-size: contain;
+//  }
+//}
+
+.menu-container{
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+  font-family: 'Arvo', Georgia,Times,serif;
+
+  .menu-sub-container{
+    margin-bottom: 100px;
+  }
+
+  .heading {
+    margin: 30px auto;
+    background: url("../../content/images/Menu-Divider.png") no-repeat center top;
+    height: 36px;
+    width: 100%;
+    border: none !important;
+  }
+
+  .menu-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .menu-item {
+    margin: 36px auto;
+    border-bottom: 1px rgba(0, 0, 0, .1) solid;
+  }
+
+}

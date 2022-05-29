@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+<!--  <div class="col-md-3">-->
+<!--    <span class="hipster img-fluid rounded"></span>-->
+<!--  </div>-->
+
+  <div class="menu-container">
+    <h3>Menu</h3>
+    <hr class="heading">
+    <div id="entities" *ngIf="restaurantItems && restaurantItems.length > 0">
+      <div class="menu-sub-container" *ngFor="let restaurantMenu of restaurantMenus;" data-cy="entityTable">
+        <div class="menu-title">{{restaurantMenu.title}}</div>
+        <div *ngFor="let restaurantItem of restaurantItems;">
+          <div class="d-flex menu-item" *ngIf="restaurantItem.restaurantMenu?.id == restaurantMenu.id">
+            <div class="w-75">
+              <div class="row justify-content-between">
+                <a class="w-auto" [routerLink]="['/restaurant-item', restaurantItem?.id, 'view']">{{restaurantItem?.title}}</a>
+                <div class="w-auto">{{restaurantItem.price | currency }}</div>
+              </div>
+              <p>{{restaurantItem.summary}}</p>
+            </div>
+            <div class="d-flex w-25 justify-content-center align-items-center">
+              <a (click)="addToCart(restaurantItem)"
+                [routerLink]="['/cart']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton">
+                <fa-icon icon="plus"></fa-icon>
+                <span class="d-none d-md-inline">Add To Cart</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

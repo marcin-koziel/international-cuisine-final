@@ -1,0 +1,38 @@
+entity RestaurantMenu {
+	title String
+}
+
+entity RestaurantItem {
+	title String,
+    summary String,
+    price Float,
+    itemDiscount Float
+}
+
+entity RestaurantOrder {
+    quantity Integer,
+    total Float
+}
+
+entity Transaction {
+	subTotal Float,
+    tax Float,
+    total Float,
+	lastFourDigits String
+}
+
+relationship ManyToOne {
+	Transaction{user(login)} to User
+}
+
+relationship OneToMany {
+	RestaurantMenu{item(title)} to RestaurantItem{restaurantMenu(title)}
+}
+
+relationship OneToOne {
+	RestaurantOrder{item(title)} to RestaurantItem{restaurantOrder}
+}
+
+relationship OneToMany {
+	Transaction{restaurantOrder} to RestaurantOrder{transaction}
+}
